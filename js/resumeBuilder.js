@@ -8,8 +8,8 @@ var bio = {
 		"skype" : "king.belau", 
 		"location" : "Munich, Germany"
 	},
-	"welcomeMessage" : "I would love to suck your dicks",
-	"skills" : ["sucking dicks", "fucking awesome mothers", "wanking"],
+	"welcomeMessage" : "Coding is my passion!",
+	"skills" : ["iOS Development", "Mobile Software Architecture"],
 	"bioPicture" : "http://functionalaesthetics.eu/wp-content/uploads/2015/07/nbelau-300x300.jpg"
 }
 
