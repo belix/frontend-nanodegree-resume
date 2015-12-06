@@ -61,6 +61,13 @@ h5 {
 
 }
 
+body{
+  margin-top: 50px;
+}
+
+.navbar-container{
+  margin-left: 20px;
+}
 
 .date-text {
   font-style: italic;
