@@ -48,6 +48,22 @@ var education = {
 	]
 }
 
+var projects = {
+	"project" : [{
+		"title" : "Fit Fuze iOS Application (iPhone & Apple Watch)",
+		"dates" : "2015", 
+		"description" : "Powerful fitness assistant with free Apple Watch support. Period. Leave your pen, papers and training diary in the locker room - FIT Fuze has everything you need. With no need in internet connection.",
+		"images" : ["images/fitfuze@2x.png"]
+	},
+	{
+		"title" : "Quizzly iOS Application (iPad)",
+		"dates" : "2015", 
+		"description" : "Ever thought about creating a special quiz with personalized questions to send it as a present to your friends and family? Looking for a unique present for your beloved ones? Then you gonna love Quizzly – being able to create funny quizzes with your own questions, pictures, personal notes and presents. Give special quizzes to special people for christmas, anniversaries or just to bring back old, funny and unforgettable memories. Quizzly as a present is personal, unique and perfect as a small gift which will bring a smile in your friends’ faces.",
+		"images" : ["images/quizzly@2x.jpeg"]
+	}]
+};
+
+
 var work = {
 	"jobs" : [
 		{
@@ -116,9 +132,26 @@ work.display = function(){
 		$(".work-entry:last").append(formattedWorkContent);
 	}
 }
+
+projects.display = function(){
+	for(item in projects.project){
+		$("#projects").append(HTMLprojectStart);
+		var formattedTitle = HTMLprojectTitle.replace("%data%",projects.project[item].title);
+		var formattedDates = HTMLprojectDates.replace("%data%",projects.project[item].dates);
+		var formattedDescription = HTMLprojectDescription.replace("%data%",projects.project[item].description);
+		
+		$(".project-entry:last").append(formattedTitle,formattedDates,formattedDescription);
+		for (image in projects.project[item].images) {
+			var formattedImage = HTMLprojectImage.replace("%data%",projects.project[item].images[image]);
+			$(".project-entry:last").append(formattedImage);
+		};
+	}
+};
+
 bio.display()
 work.display();
 education.display()
+projects.display()
 
 $("#mapDiv").append(googleMap);
 
