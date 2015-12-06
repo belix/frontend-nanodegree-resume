@@ -1,6 +1,6 @@
 var bio = {
 	"name" : "Felix Belau",
-	"role" : "iOS Developer",
+	"role" : "Mobile Software Engineer",
 	"contacts" : {
 		"mobile" : "015234586645",
 		"email" : "felix.belau@me.com",
@@ -8,8 +8,8 @@ var bio = {
 		"skype" : "king.belau", 
 		"location" : "Munich, Germany"
 	},
-	"welcomeMessage" : "Coding is my passion!",
-	"skills" : ["iOS Development", "Mobile Software Architecture"],
+	"welcomeMessage" : "creating beautiful mobile applications is my passion!",
+	"skills" : ["Swift", "Objective-C", "Java"],
 	"bioPicture" : "http://functionalaesthetics.eu/wp-content/uploads/2015/07/nbelau-300x300.jpg"
 }
 
@@ -86,7 +86,7 @@ bio.display = function() {
 	var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
 	var formattedSkype = HTMLcontactGeneric.replace("%contact%","skype").replace("%data%",bio.contacts.skype);
-	$("#topContacts").append(formattedMobile,formattedEmail,formattedSkype,formattedLocation);
+	//$("#topContacts").append(formattedMobile,formattedEmail,formattedSkype,formattedLocation);
 	$("#footerContacts").append(formattedMobile,formattedEmail,formattedSkype, formattedLocation);
 };
 
